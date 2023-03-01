@@ -10,6 +10,7 @@ api = Api(app = flask_app,
 
 name_space = api.namespace('events', description='Event consumer')
 
+# define data model
 model = api.model('Event Model', {
             'event_type': fields.String(required = True,  description="Event type",  help="Cannot be blank."),
             'event_payload': fields.String(required = True, description="Event payload", help="Cannot be blank.")
@@ -27,6 +28,7 @@ class MainClass(Resource):
     def post(self):
         if request.is_json:
             try:
+                # save incoming payloads to a file
                 with open(params['payloads_file'], 'a') as file:
                     json.dump(request.json, file)
                     file.write('\n')
