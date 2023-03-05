@@ -9,7 +9,7 @@ Here are the available configuration options:
 
 # Installation
 ```bash
-git clone https://github.com/saniokas/flask-event-propagator.git
+git clone https://github.com/saniokas/flask-event-consumer.git
 pip install -r requirements.txt
 flask run -h 127.0.0.1 -p 8000
 ```
