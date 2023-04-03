@@ -15,4 +15,7 @@ instance/
 .idea/
 
 # Log files
-*.log
+*.log\
+
+# data files
+data/*
